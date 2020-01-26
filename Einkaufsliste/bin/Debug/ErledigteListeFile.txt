@@ -1,0 +1,4 @@
+ArtilNummer: 1a| Bezeichnung: SPORTSTECH Laufband| Menge: 2
+ArtilNummer: 2a| Bezeichnung: Hyperextension Rückentrainer| Menge: 4
+ArtilNummer: 22| Bezeichnung: ff| Menge: 9
+ArtilNummer: 100| Bezeichnung:  Bauchtrainer| Menge: 6

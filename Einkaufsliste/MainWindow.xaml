@@ -1,0 +1,50 @@
+﻿<Window x:Class="Einkaufsliste.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Einkaufsliste"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="750">
+    <Grid>
+        <Canvas>
+            <Label Content="Einkaufsliste" Canvas.Left="310" Canvas.Top="15" HorizontalAlignment="Center" Style="{StaticResource LbTitle}"/>
+
+            <DataGrid AutoGenerateColumns="False" x:Name="datGListeArtikeln" Height="186" Canvas.Left="40" Canvas.Top="219" Width="646" ColumnWidth="*">
+                <DataGrid.Columns  >
+
+                    <DataGridTextColumn Header="Artikel N°" Binding="{Binding ArtikelnNummer}"/>
+                    <DataGridTextColumn Header="Bezeichnung" Binding="{Binding Bezeichnung}"/>
+                    <DataGridTextColumn Header="Menge"  Binding="{Binding Menge}" />
+
+                     
+                    <DataGridTemplateColumn Header="Erledigt">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Erledigt}" Checked="OnChecked_Accepted" Unchecked="OnUnchecked_Accepted" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Canvas.Left="40" TextWrapping="Wrap" Text="" Canvas.Top="118" Height="21" Width="154"/>
+
+            <Canvas Height="124" Canvas.Left="40" Canvas.Top="69" Width="646" Background="Thistle"  >
+                <Label Content="Artikel Nummer" Canvas.Left="10" Canvas.Top="8"/>
+                <TextBox x:Name="TbNummer" Height="23" TextWrapping="Wrap"   HorizontalAlignment="Right" Width="142" Canvas.Left="154" Canvas.Top="7"/>
+                <Label Content="Bezeichnung" Canvas.Top="39" Canvas.Left="10" Width="94"/>
+                <Label Content="Menge" Canvas.Top="70" Canvas.Left="10" Width="94"/>
+                <TextBox x:Name="TbBezeichnung" Height="23" TextWrapping="Wrap"   HorizontalAlignment="Right" Width="142" Canvas.Left="154" Canvas.Top="35"/>
+                <ComboBox x:Name="ComboMengue" Height="26" Canvas.Left="154" Canvas.Top="64" Width="142"/>
+                <Button x:Name="BtnAdd" Content="Artikel hinzufügen" Canvas.Top="84" Canvas.Right="200" Style="{StaticResource BtnStyle}" Canvas.Left="502" Click="BtnAdd_Click" Width="134"/>
+
+
+            </Canvas>
+            <Button x:Name="BtneinkaufListe" Content="Einkaufliste erstellen " Height="33" Canvas.Left="40" Canvas.Top="422" Width="140" Style="{StaticResource BtnStyle}" Click="BtneinkaufListe_Click"/>
+            <Button x:Name="BtnErlidigteListe" Content="Erledigteliste erstellen" Height="33" Canvas.Left="291" Canvas.Top="422" Width="140" Style="{StaticResource BtnStyle}" Click="BtnErlidigteListe_Click"/>
+            <Button x:Name="BtnEnde" Content="Ende" Height="33" Canvas.Left="546" Canvas.Top="422" Width="140" Style="{StaticResource BtnStyle}" Click="BtnEnde_Click"/>
+
+
+        </Canvas>
+    </Grid>
+</Window>

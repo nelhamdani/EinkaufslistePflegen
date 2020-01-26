@@ -1,0 +1,7 @@
+ArtilNummer: 3a| Bezeichnung: SPORTSTECH Bauchtrainer| Menge: 6
+ArtilNummer: 3e| Bezeichnung: rr| Menge: 5
+ArtilNummer: d| Bezeichnung: f| Menge: 4
+ArtilNummer: d| Bezeichnung: f| Menge: 4
+ArtilNummer: d| Bezeichnung: f| Menge: 4
+ArtilNummer: g| Bezeichnung: g| Menge: 2
+ArtilNummer: 22| Bezeichnung: dd| Menge: 8
